@@ -4,6 +4,7 @@ import { Stats } from './components/sections/Stats';
 import { ParallaxBanner } from './components/sections/ParallaxBanner';
 import { GamesShowcase } from './components/sections/GamesShowcase';
 import { About } from './components/sections/About';
+import { Credentials } from './components/sections/Credentials';
 import { Footer } from './components/layout/Footer';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <ParallaxBanner />
       <GamesShowcase />
       <About />
+      <Credentials />
       <Footer />
     </div>
   );

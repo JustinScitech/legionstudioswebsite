@@ -1,12 +1,6 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { useRobloxGames } from '../../hooks/useRobloxGames';
 import { GameCard } from '../ui/GameCard';
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 export function GamesShowcase() {
   const { games, loading } = useRobloxGames();
@@ -36,27 +30,13 @@ export function GamesShowcase() {
             <div className="w-8 h-8 border-2 border-white/20 border-t-white rounded-full animate-spin" />
           </div>
         ) : (
-          <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={24}
-            slidesPerView={1}
-            centeredSlides={games.length <= 2}
-            navigation
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            breakpoints={{
-              640: { slidesPerView: 1, spaceBetween: 20 },
-              768: { slidesPerView: 2, spaceBetween: 24 },
-              1024: { slidesPerView: 2, spaceBetween: 28 },
-            }}
-            className="games-swiper"
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 md:gap-8">
             {games.map((game, i) => (
-              <SwiperSlide key={game.id}>
+              <div key={game.id} className="w-full sm:w-[340px] md:w-[380px]">
                 <GameCard game={game} index={i} />
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </div>
         )}
       </div>
     </section>

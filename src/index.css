@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.games-swiper {
+  padding-bottom: 3rem !important;
+}
+
+.games-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.games-swiper .swiper-pagination-bullet-active {
+  background: white;
+}
+
+.games-swiper .swiper-button-next,
+.games-swiper .swiper-button-prev {
+  color: white;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.games-swiper .swiper-button-next:hover,
+.games-swiper .swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.games-swiper .swiper-button-next::after,
+.games-swiper .swiper-button-prev::after {
+  font-size: 1.25rem;
+}

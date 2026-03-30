@@ -44,12 +44,7 @@ export function GameCard({ game, index }: GameCardProps) {
           <h3 className="font-bold text-lg text-white group-hover:text-white/90 transition-colors truncate">
             {game.name}
           </h3>
-          {game.placeVisits > 0 && (
-            <p className="text-sm text-neutral-500 mt-1">
-              {game.placeVisits.toLocaleString()} visits
-            </p>
-          )}
-          <div className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-neutral-400 group-hover:text-white transition-colors">
+          <div className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-neutral-400 group-hover:text-white transition-colors">
             Play Now
             <svg
               width="16"

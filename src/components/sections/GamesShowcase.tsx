@@ -40,13 +40,14 @@ export function GamesShowcase() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
             slidesPerView={1}
+            centeredSlides={games.length <= 2}
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
-              640: { slidesPerView: 1.2, spaceBetween: 20 },
-              768: { slidesPerView: 1.8, spaceBetween: 24 },
-              1024: { slidesPerView: 2.2, spaceBetween: 28 },
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 2, spaceBetween: 28 },
             }}
             className="games-swiper"
           >
